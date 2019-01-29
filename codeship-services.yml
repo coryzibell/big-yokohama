@@ -1,0 +1,14 @@
+---
+  build_backend:
+    image: "composer:latest"
+    volumes:
+      - ./vendor_temp:/vendor
+  build_frontend:
+    image: "node:8"
+    volumes:
+      - ./artifacts_temp:/public_html/dist
+  deploy:
+    image: "alpine:latest"
+    volumes_from:
+      - build_backend
+      - build_frontend

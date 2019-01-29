@@ -1,0 +1,13 @@
+- name: "build_deploy_production"
+  type: "serial"
+  tag: "master"
+  steps:
+    - name: "build_backend"
+      service: "build_backend"
+      command: "composer install --prefer-source --no-interaction"
+    - name: "build_frontend"
+      service: "build_frontend"
+      command: "npm install; npm start"
+    - name: "deploy"
+      service: "deploy"
+      command: "rsync --copy-unsafe-links -rvzcSle 'ssh -p 22 -o StrictHostKeyChecking=no -i id_rsa' --exclude-from '.rsyncignore' ./ coryzibell@coryzibell.webfactional.com:/home/coryzibell/webapps/big_yokohama/"
