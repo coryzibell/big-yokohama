@@ -4,7 +4,7 @@
   steps:
     - name: "build_backend"
       service: "build_backend"
-      command: "build_backend.sh"
+      command: "./build_backend.sh"
     - name: "build_frontend"
       service: "build_frontend"
       command: "npm install; npm start"
