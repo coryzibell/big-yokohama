@@ -6,7 +6,7 @@
       service: build_backend
       command: pwd
     - name: build_frontend
-      service: build_frontend"
+      service: build_frontend
       command: npm install; npm start
     - name: deploy
       service: deploy
