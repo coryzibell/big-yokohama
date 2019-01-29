@@ -1,5 +1,3 @@
 #!/bin/bash
-OUTPUT="$(ls -la)"
-echo "${OUTPUT}"
-OUTPUT="$(pwd)"
-echo "${OUTPUT}"
+cd /
+composer install --prefer-source --no-interaction
