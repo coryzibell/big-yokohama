@@ -94,6 +94,11 @@ jobs:
           fingerprints:
             - "c4:5c:80:25:39:5e:d8:63:09:b9:aa:db:40:c7:a8:6c"
       - run:
+          name: Print Directory Tree
+          command: |
+            set -exu
+            ls -la web
+      - run:
           name: Move Workspace Artifacts
           command: |
             set -exu
