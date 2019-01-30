@@ -1,22 +1,47 @@
 version: 2
+
+references:
+  php_deps_cache_key: &php_deps_cache_key
+    v1-dependencies-{{ checksum "composer.json" }}
+  php_deps_backup_cache_key: &php_deps_backup_cache_key
+    v1-dependencies
+  js_deps_cache_key: &js_deps_cache_key
+    node-v3-{{ checksum "package.json" }}
+  js_deps_backup_cache_key: &js_deps_backup_cache_key
+    node-v3
+  workspace_root: &workspace_root
+    /tmp/workspace
+  attach_workspace: &attach_workspace
+    attach_workspace:
+      at: *workspace_root
+
 jobs:
   build_backend:
     docker:
       - image: circleci/php:7.2
 
     steps:
+      - *attach_workspace
       - checkout
 
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "composer.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+          - *php_deps_cache_key
+          - *php_deps_backup_cache_key
 
       - run:
           name: Install PHP Dependencies
           command: composer install --prefer-source --no-interaction
-
+      - run:
+          name: Persist PHP Dependencies
+          command: |
+            set -exu
+            mkdir -p /tmp/workspace/vendor
+            mv vendor/* /tmp/workspace/vendor/
+      - persist_to_workspace:
+          root: *workspace_root
+          paths:
+            - vendor
       - save_cache:
           paths:
             - ./vendor
@@ -27,22 +52,55 @@ jobs:
       - image: circleci/node:8
 
     steps:
+      - *attach_workspace
       - checkout
 
       - restore_cache:
           keys:
-            - node-v3-{{ checksum "package.json" }}
-            - node-v3-
+            - *js_deps_cache_key
+            - *js_deps_backup_cache_key
       - run:
           name: Install Node Dependencies
           command: npm install
+      - run:
+          name: Build JS & CSS
+          command: npm start
+      - run:
+          name: Persist JS & CSS Bundles
+          command: |
+            set -exu
+            mkdir -p /tmp/workspace/dist
+            mv public_html/dist/* /tmp/workspace/dist/
+      - persist_to_workspace:
+          root: *workspace_root
+          paths:
+            - dist
       - save_cache:
           key: node-v3-{{ checksum "package.json" }}
           paths:
             - node_modules
+
+  deploy:
+    docker:
+      - image: alpine:latest
+
+    steps:
+      - *attach_workspace
+      - checkout
       - run:
-          name: Build JS & CSS
-          command: npm start
+          name: Move Workspace Artifacts
+          command: |
+            set -exu
+            mkdir -p vendor
+            mv /tmp/workspace/vendor/* vendor/
+            mv /tmp/workspace/dist/* public_html/dist
+      - run:
+          name: Print Directory Tree
+          command: |
+            set -exu
+            ls -la vendor
+
+
 
 workflows:
   version: 2
@@ -50,6 +108,13 @@ workflows:
     jobs:
       - build_backend
       - build_frontend
+      - deploy:
+          requires:
+            - build_backend
+            - build_frontend
+          filters:
+            branches:
+              only: master
 
 
 
