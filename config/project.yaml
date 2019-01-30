@@ -1,4 +1,4 @@
-dateModified: 1548875247
+dateModified: 1548876085
 email:
   fromEmail: cory@46m.us
   fromName: 'Big Yokohama'
@@ -6,6 +6,51 @@ email:
 fieldGroups:
   08c8171b-a177-41fc-9fca-b20714f8bab8:
     name: Common
+plugins:
+  cookies:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  dumper:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  environment-label:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  molecule:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  neo:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.0
+  path-tools:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  position-fieldtype:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.7
+  twig-perversion:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 sections:
   81c65ded-263f-4efc-8179-d8010a05a324:
     enableVersioning: true

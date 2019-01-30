@@ -21,7 +21,7 @@
   "require": {
     "craftcms/cms": "3.1.6.1",
     "vlucas/phpdotenv": "^2.4.0",
-    "verbb/super-table": "2.0.5",
+    "verbb/super-table": "2.1.5.3",
     "pennebaker/craft-architect": "2.2.8",
     "charliedev/element-map": "1.0.2",
     "mmikkel/cp-field-inspect": "1.0.4",
@@ -34,7 +34,9 @@
     "aelvan/imager": "v2.0.0",
     "nystudio107/craft-cookies": "1.1.9",
     "marionnewlevant/twig-perversion": "v2.0.3",
-    "verbb/feed-me": "3.0.0-beta.2"
+    "verbb/feed-me": "3.0.0-beta.2",
+    "trendyminds/molecule": "1.1.1",
+    "spicyweb/craft-neo": "^2.2"
   },
   "autoload": {
     "psr-4": {
