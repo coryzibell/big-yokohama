@@ -94,17 +94,12 @@ jobs:
           fingerprints:
             - "c4:5c:80:25:39:5e:d8:63:09:b9:aa:db:40:c7:a8:6c"
       - run:
-          name: Print Directory Tree
-          command: |
-            set -exu
-            ls -la public_html
-      - run:
           name: Move Workspace Artifacts
           command: |
             set -exu
             mkdir -p vendor
             mv /tmp/workspace/vendor/* vendor/
-            mv /tmp/workspace/dist/* public_html/dist/
+            mv /tmp/workspace/dist/* web/dist/
 
 workflows:
   version: 2
