@@ -14,8 +14,8 @@ jobs:
           - v1-dependencies-
 
       - run:
-        name: Install PHP Dependencies
-        command: composer install --prefer-source --no-interaction
+          name: Install PHP Dependencies
+          command: composer install --prefer-source --no-interaction
 
       - save_cache:
           paths:
@@ -30,19 +30,19 @@ jobs:
       - checkout
 
       - restore_cache:
-        keys:
-          - node-v3-{{ checksum "package.json" }}
-          - node-v3-
+          keys:
+            - node-v3-{{ checksum "package.json" }}
+            - node-v3-
       - run:
-        name: Install Node Dependencies
-        command: npm install
+          name: Install Node Dependencies
+          command: npm install
       - save_cache:
           key: node-v3-{{ checksum "package.json" }}
           paths:
             - node_modules
       - run:
-        name: Build JS & CSS
-        command: npm start
+          name: Build JS & CSS
+          command: npm start
 
 workflows:
   version: 2
