@@ -1,4 +1,4 @@
-dateModified: 1548887926
+dateModified: 1548888512
 email:
   fromEmail: cory@46m.us
   fromName: 'Big Yokohama'
@@ -40,27 +40,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: benf\neo\Field
-  9e8cdf28-75bd-4bb9-ab37-51e93d6f4377:
-    contentColumnType: string
-    fieldGroup: b7ec2343-33e7-4e14-adc2-e5883a09d88d
-    handle: testSupertable
-    instructions: ''
-    name: 'Test Supertable'
-    searchable: true
-    settings:
-      columns:
-        10:
-          width: ''
-      contentTable: '{{%stc_testsupertable}}'
-      fieldLayout: row
-      localizeBlocks: false
-      maxRows: ''
-      minRows: ''
-      selectionLabel: ''
-      staticField: ''
-    translationKeyFormat: null
-    translationMethod: site
-    type: verbb\supertable\fields\SuperTableField
 matrixBlockTypes:
   03686b96-7799-47e6-8543-572a03ddce40:
     field: 13620924-cb7b-41d7-925d-8c9c8ba23748
@@ -128,39 +107,6 @@ matrixBlockTypes:
         type: craft\fields\PlainText
     handle: superInternalMatrixBlock
     name: 'Super Internal Matrix Block'
-    sortOrder: 1
-  ae56a05e-58aa-4f92-b5c6-d6ab71940725:
-    field: 5bccd252-bb3a-474e-9070-6a36d54effbc
-    fieldLayouts:
-      6f10aaf9-dcba-419d-adf2-0e2f198f9c27:
-        tabs:
-          -
-            fields:
-              98cca461-3f65-4887-b9bc-81c6f1bc3a98:
-                required: '0'
-                sortOrder: 1
-            name: Content
-            sortOrder: 1
-    fields:
-      98cca461-3f65-4887-b9bc-81c6f1bc3a98:
-        contentColumnType: text
-        fieldGroup: null
-        handle: label
-        instructions: ''
-        name: Label
-        searchable: '1'
-        settings:
-          charLimit: ''
-          code: ''
-          columnType: text
-          initialRows: '4'
-          multiline: ''
-          placeholder: ''
-        translationKeyFormat: null
-        translationMethod: none
-        type: craft\fields\PlainText
-    handle: testMatrixBlock
-    name: 'Test Matrix Block'
     sortOrder: 1
 neoBlockTypes:
   6ce7ad00-4e4a-4b58-a52a-9a620ada557c:
@@ -326,54 +272,6 @@ superTableBlockTypes:
         translationKeyFormat: null
         translationMethod: site
         type: craft\fields\Matrix
-  baa45010-c3de-44d7-b93e-66ecc1225d3b:
-    field: 9e8cdf28-75bd-4bb9-ab37-51e93d6f4377
-    fieldLayouts:
-      4c5235bd-3e08-43f8-93e5-0e831c342f5c:
-        tabs:
-          -
-            fields:
-              5bccd252-bb3a-474e-9070-6a36d54effbc:
-                required: '0'
-                sortOrder: 2
-              d7824a61-26d8-45b5-a36b-2672bd28499d:
-                required: '0'
-                sortOrder: 1
-            name: Content
-            sortOrder: 1
-    fields:
-      5bccd252-bb3a-474e-9070-6a36d54effbc:
-        contentColumnType: string
-        fieldGroup: null
-        handle: matrixTest
-        instructions: ''
-        name: 'Matrix Test'
-        searchable: '1'
-        settings:
-          contentTable: '{{%matrixcontent_matrixtest}}'
-          localizeBlocks: false
-          maxBlocks: ''
-          minBlocks: ''
-        translationKeyFormat: null
-        translationMethod: site
-        type: craft\fields\Matrix
-      d7824a61-26d8-45b5-a36b-2672bd28499d:
-        contentColumnType: text
-        fieldGroup: null
-        handle: label
-        instructions: ''
-        name: Label
-        searchable: '1'
-        settings:
-          charLimit: ''
-          code: ''
-          columnType: text
-          initialRows: '4'
-          multiline: ''
-          placeholder: ''
-        translationKeyFormat: null
-        translationMethod: none
-        type: craft\fields\PlainText
 system:
   edition: solo
   live: true
