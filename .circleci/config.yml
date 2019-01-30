@@ -24,7 +24,7 @@ jobs:
 
   build_frontend:
     docker:
-      - image: circlei/node:8
+      - image: circleci/node:8
 
     steps:
       - checkout
