@@ -44,6 +44,8 @@ return [
 
     // Production environment settings
     'production' => [
+        'allowAutoUpdates' => false,
+
         // Base site URL
         'siteUrl' => null,
     ],
