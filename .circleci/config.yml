@@ -99,7 +99,7 @@ jobs:
             set -exu
             mkdir -p vendor
             mv /tmp/workspace/vendor/* vendor/
-            mv /tmp/workspace/dist/* public_html/dist
+            mv /tmp/workspace/dist/* public_html/dist/
       - run:
           name: Print Directory Tree
           command: |
