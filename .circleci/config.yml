@@ -87,7 +87,7 @@ jobs:
     steps:
       - run:
           name: Install deployment packages
-          command: apk add --no-cache openssh-client rsync
+          command: apk add --no-cache ca-certificates openssh-client rsync
       - *attach_workspace
       - checkout
       - add_ssh_keys:
