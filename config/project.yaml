@@ -1,0 +1,54 @@
+dateModified: 1548875247
+email:
+  fromEmail: cory@46m.us
+  fromName: 'Big Yokohama'
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  08c8171b-a177-41fc-9fca-b20714f8bab8:
+    name: Common
+sections:
+  81c65ded-263f-4efc-8179-d8010a05a324:
+    enableVersioning: true
+    entryTypes:
+      9bd6bd61-3365-43c2-8a3b-459dd9d80805:
+        handle: homepage
+        hasTitleField: false
+        name: Homepage
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: null
+    handle: homepage
+    name: Homepage
+    propagateEntries: true
+    siteSettings:
+      cf20cb7a-42d1-4144-a6b6-fb6c436fec7b:
+        enabledByDefault: true
+        hasUrls: true
+        template: ''
+        uriFormat: __home__
+    type: single
+siteGroups:
+  afdaac0d-a839-48e7-bf96-e2beb2c2a9d6:
+    name: 'Big Yokohama'
+sites:
+  cf20cb7a-42d1-4144-a6b6-fb6c436fec7b:
+    baseUrl: '@web/'
+    handle: default
+    hasUrls: '1'
+    language: en-US
+    name: 'Big Yokohama'
+    primary: '1'
+    siteGroup: afdaac0d-a839-48e7-bf96-e2beb2c2a9d6
+    sortOrder: '1'
+system:
+  edition: solo
+  live: true
+  name: 'Big Yokohama'
+  schemaVersion: 3.1.23
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true

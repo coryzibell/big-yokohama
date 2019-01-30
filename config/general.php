@@ -11,6 +11,8 @@
 return [
     // Global settings
     '*' => [
+        'useProjectConfigFile' => true,
+
         // Default Week Start Day (0 = Sunday, 1 = Monday...)
         'defaultWeekStartDay' => 0,
 
