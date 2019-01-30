@@ -97,7 +97,7 @@ jobs:
           name: Print Directory Tree
           command: |
             set -exu
-            ls -la /tmp/workspace/dist
+            ls -la public_html
       - run:
           name: Move Workspace Artifacts
           command: |
