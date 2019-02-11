@@ -1,4 +1,4 @@
-dateModified: 1549928545
+dateModified: 1549929401
 email:
   fromEmail: cory@46m.us
   fromName: 'Big Yokohama'
@@ -10,144 +10,6 @@ fieldGroups:
     name: Text
   b7ec2343-33e7-4e14-adc2-e5883a09d88d:
     name: Assets
-fields:
-  13620924-cb7b-41d7-925d-8c9c8ba23748:
-    contentColumnType: string
-    fieldGroup: b7ec2343-33e7-4e14-adc2-e5883a09d88d
-    handle: matrixTest2
-    instructions: ''
-    name: 'Matrix Test 2'
-    searchable: true
-    settings:
-      contentTable: '{{%matrixcontent_matrixtest2}}'
-      localizeBlocks: false
-      maxBlocks: ''
-      minBlocks: ''
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Matrix
-  9214414a-80c0-4baf-a85d-6961fcecf24c:
-    contentColumnType: string
-    fieldGroup: b7ec2343-33e7-4e14-adc2-e5883a09d88d
-    handle: neoTest
-    instructions: ''
-    name: 'Neo Test'
-    searchable: true
-    settings:
-      localizeBlocks: false
-      maxBlocks: ''
-      minBlocks: ''
-    translationKeyFormat: null
-    translationMethod: site
-    type: benf\neo\Field
-matrixBlockTypes:
-  03686b96-7799-47e6-8543-572a03ddce40:
-    field: 13620924-cb7b-41d7-925d-8c9c8ba23748
-    fieldLayouts:
-      4d0d5f7c-11d8-4446-854b-fd6f488bbcf0:
-        tabs:
-          -
-            fields:
-              b59782f6-b593-4f55-9605-1f02946442ed:
-                required: '0'
-                sortOrder: 1
-            name: Content
-            sortOrder: 1
-    fields:
-      b59782f6-b593-4f55-9605-1f02946442ed:
-        contentColumnType: string
-        fieldGroup: null
-        handle: singleSupertableField
-        instructions: ''
-        name: 'Single Supertable Field'
-        searchable: '1'
-        settings:
-          contentTable: '{{%stc_singlesupertablefield}}'
-          fieldLayout: table
-          localizeBlocks: false
-          maxRows: ''
-          minRows: ''
-          selectionLabel: ''
-          staticField: ''
-        translationKeyFormat: null
-        translationMethod: site
-        type: verbb\supertable\fields\SuperTableField
-    handle: superTableMatrixTest
-    name: 'Super Table Matrix Test'
-    sortOrder: 1
-  a5b467d6-bd52-4051-8d84-b82f1d408d0e:
-    field: 3c3d0195-11f0-4320-9a58-f1edf552afd6
-    fieldLayouts:
-      0af894bf-d177-4e79-a363-b0d69dfc0549:
-        tabs:
-          -
-            fields:
-              92af8949-5b73-416a-9a61-c063b59c64a2:
-                required: '0'
-                sortOrder: 1
-            name: Content
-            sortOrder: 1
-    fields:
-      92af8949-5b73-416a-9a61-c063b59c64a2:
-        contentColumnType: text
-        fieldGroup: null
-        handle: superInternalLabel
-        instructions: ''
-        name: 'Super Internal Label'
-        searchable: '1'
-        settings:
-          charLimit: ''
-          code: ''
-          columnType: text
-          initialRows: '4'
-          multiline: ''
-          placeholder: ''
-        translationKeyFormat: null
-        translationMethod: none
-        type: craft\fields\PlainText
-    handle: superInternalMatrixBlock
-    name: 'Super Internal Matrix Block'
-    sortOrder: 1
-neoBlockTypes:
-  6ce7ad00-4e4a-4b58-a52a-9a620ada557c:
-    childBlocks:
-      - testNeoBlock
-    field: 9214414a-80c0-4baf-a85d-6961fcecf24c
-    fieldLayouts:
-      16445238-d807-4c21-a4e3-df3bb15dc01e:
-        tabs:
-          -
-            fields:
-              13620924-cb7b-41d7-925d-8c9c8ba23748:
-                required: false
-                sortOrder: 1
-            name: Content
-            sortOrder: 1
-    handle: neoMatrixBlockTest
-    maxBlocks: 0
-    maxChildBlocks: 0
-    name: 'NEO Matrix Block Test'
-    sortOrder: 2
-    topLevel: true
-  bd1bc1ba-0a19-4939-a11e-7360c9a752bb:
-    childBlocks: ''
-    field: 9214414a-80c0-4baf-a85d-6961fcecf24c
-    fieldLayouts:
-      a4af0697-dac5-4cbb-9002-02c5de8de8be:
-        tabs:
-          -
-            fields:
-              9e8cdf28-75bd-4bb9-ab37-51e93d6f4377:
-                required: false
-                sortOrder: 1
-            name: Content
-            sortOrder: 1
-    handle: testNeoBlock
-    maxBlocks: 0
-    maxChildBlocks: 0
-    name: 'Test NEO Block'
-    sortOrder: 1
-    topLevel: true
 plugins:
   cookies:
     edition: standard
@@ -243,35 +105,6 @@ sites:
     primary: '1'
     siteGroup: afdaac0d-a839-48e7-bf96-e2beb2c2a9d6
     sortOrder: '1'
-superTableBlockTypes:
-  80ca2558-d1f9-48bb-bc8a-57e985c08866:
-    field: b59782f6-b593-4f55-9605-1f02946442ed
-    fieldLayouts:
-      a19c99d2-6fb5-46bf-8f57-f836b740d2a4:
-        tabs:
-          -
-            fields:
-              3c3d0195-11f0-4320-9a58-f1edf552afd6:
-                required: '0'
-                sortOrder: 1
-            name: Content
-            sortOrder: 1
-    fields:
-      3c3d0195-11f0-4320-9a58-f1edf552afd6:
-        contentColumnType: string
-        fieldGroup: null
-        handle: internalMatrixField
-        instructions: ''
-        name: 'Internal Matrix Field'
-        searchable: '1'
-        settings:
-          contentTable: '{{%matrixcontent_internalmatrixfield}}'
-          localizeBlocks: false
-          maxBlocks: ''
-          minBlocks: ''
-        translationKeyFormat: null
-        translationMethod: site
-        type: craft\fields\Matrix
 system:
   edition: solo
   live: true
