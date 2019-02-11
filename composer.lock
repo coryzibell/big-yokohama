@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e9b28ca28e566c3d589e8af4aaa042b0",
+    "content-hash": "d5be5240471a39826ca768c288d58a4c",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -595,11 +595,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.1.6.1",
+            "version": "3.1.8",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/12bf72bc73e0905a5c8a2bf74096046eb07ee075",
-                "reference": "12bf72bc73e0905a5c8a2bf74096046eb07ee075",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/ba226f463efce722ddfbcbf726fed851fff37277",
+                "reference": "ba226f463efce722ddfbcbf726fed851fff37277",
                 "shasum": ""
             },
             "require": {
@@ -675,7 +675,7 @@
                 "docs": "https://github.com/craftcms/docs",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2019-01-29T22:06:25+00:00"
+            "time": "2019-02-04T19:38:51+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -1025,15 +1025,15 @@
         },
         {
             "name": "ether/seo",
-            "version": "3.2.3",
+            "version": "3.5.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ethercreative/seo/zipball/528bfc3b41eb8cf077aa684d4b5f37a07cc02a83",
-                "reference": "528bfc3b41eb8cf077aa684d4b5f37a07cc02a83",
+                "url": "https://api.github.com/repos/ethercreative/seo/zipball/593a2552903d16c720dce2e6b581cd0c9e36e0d3",
+                "reference": "593a2552903d16c720dce2e6b581cd0c9e36e0d3",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0-RC1"
+                "craftcms/cms": "^3.1.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -1041,8 +1041,7 @@
                 "name": "SEO",
                 "developer": "Ether Creative",
                 "developerUrl": "https://ethercreative.co.uk",
-                "class": "ether\\seo\\Seo",
-                "schemaVersion": "3.0.0"
+                "class": "ether\\seo\\Seo"
             },
             "autoload": {
                 "psr-4": {
@@ -1057,7 +1056,7 @@
                 "issues": "https://github.com/ethercreative/seo",
                 "docs": "https://github.com/ethercreative/seo/blob/v3/README.md"
             },
-            "time": "2018-04-05T09:12:46+00:00"
+            "time": "2019-01-28T12:29:02+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -2155,11 +2154,11 @@
         },
         {
             "name": "marionnewlevant/twig-perversion",
-            "version": "2.0.3",
+            "version": "2.0.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marionnewlevant/craft-twig_perversion/zipball/3185cd2b5941b054c713c284713a61e38d90eeff",
-                "reference": "3185cd2b5941b054c713c284713a61e38d90eeff",
+                "url": "https://api.github.com/repos/marionnewlevant/craft-twig_perversion/zipball/8644b70ab9de13c4f604694067e01cc49f2735e3",
+                "reference": "8644b70ab9de13c4f604694067e01cc49f2735e3",
                 "shasum": ""
             },
             "require": {
@@ -2196,7 +2195,7 @@
                 "plugin",
                 "twigperversion"
             ],
-            "time": "2018-02-03T07:28:37+00:00"
+            "time": "2019-02-03T05:56:49+00:00"
         },
         {
             "name": "mikehaertl/php-shellcommand",
@@ -2233,11 +2232,11 @@
         },
         {
             "name": "mmikkel/cp-field-inspect",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mmikkel/CpFieldInspect-Craft/zipball/426d9638f8eca0f6a9f1beedb8a945726840d436",
-                "reference": "426d9638f8eca0f6a9f1beedb8a945726840d436",
+                "url": "https://api.github.com/repos/mmikkel/CpFieldInspect-Craft/zipball/e20117d550a5696e0b199bb90d81648356dcc83c",
+                "reference": "e20117d550a5696e0b199bb90d81648356dcc83c",
                 "shasum": ""
             },
             "require": {
@@ -2279,7 +2278,7 @@
                 "docs": "https://github.com/mmikkel/CpFieldInspect-Craft/blob/master/README.md",
                 "issues": "https://github.com/mmikkel/CpFieldInspect-Craft/issues"
             },
-            "time": "2018-03-28T07:58:02+00:00"
+            "time": "2018-09-26T08:08:50+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2455,15 +2454,15 @@
         },
         {
             "name": "nystudio107/craft-cookies",
-            "version": "1.1.9",
+            "version": "1.1.11",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-cookies/zipball/4b200dcb6e3a5c152f25ff0cbc79b7e9402256f2",
-                "reference": "4b200dcb6e3a5c152f25ff0cbc79b7e9402256f2",
+                "url": "https://api.github.com/repos/nystudio107/craft-cookies/zipball/4efba05e2800143f91152f5f3bb5ce26f12b0055",
+                "reference": "4efba05e2800143f91152f5f3bb5ce26f12b0055",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0-RC1"
+                "craftcms/cms": "^3.0.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -2472,7 +2471,7 @@
                 "schemaVersion": "1.0.0",
                 "hasCpSettings": false,
                 "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft-cookies/CHANGELOG.md",
+                "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft-cookies/v1/CHANGELOG.md",
                 "class": "nystudio107\\cookies\\Cookies",
                 "components": {
                     "cookies": "nystudio107\\cookies\\services\\CookiesService"
@@ -2501,10 +2500,10 @@
                 "craftcms"
             ],
             "support": {
-                "docs": "https://github.com/nystudio107/craft-cookies/blob/craft3/README.md",
-                "issues": "https://github.com/nystudio107/craft-3cookies/issues"
+                "docs": "https://github.com/nystudio107/craft-cookies/blob/v1/README.md",
+                "issues": "https://github.com/nystudio107/craft-cookies/issues"
             },
-            "time": "2018-02-01T21:29:26+00:00"
+            "time": "2018-12-07T01:04:54+00:00"
         },
         {
             "name": "nystudio107/craft-pathtools",
@@ -3021,11 +3020,11 @@
         },
         {
             "name": "rias/craft-position-fieldtype",
-            "version": "1.0.10",
+            "version": "1.0.14",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Rias500/craft3-position-fieldtype/zipball/e874843ac70e87c01c9e92be4d3c2de54f963da2",
-                "reference": "e874843ac70e87c01c9e92be4d3c2de54f963da2",
+                "url": "https://api.github.com/repos/Rias500/craft-position-fieldtype/zipball/18fc333880c34fd13ec2b04f43ad0a9a8b090ce2",
+                "reference": "18fc333880c34fd13ec2b04f43ad0a9a8b090ce2",
                 "shasum": ""
             },
             "require": {
@@ -3038,7 +3037,7 @@
                 "schemaVersion": "1.0.0",
                 "hasCpSettings": false,
                 "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/Rias500/position-fieldtype/master/CHANGELOG.md",
+                "changelogUrl": "https://raw.githubusercontent.com/Rias500/craft-position-fieldtype/master/CHANGELOG.md",
                 "class": "rias\\positionfieldtype\\PositionFieldtype"
             },
             "autoload": {
@@ -3064,10 +3063,10 @@
                 "position fieldtype"
             ],
             "support": {
-                "docs": "https://github.com/Rias500/position-fieldtype/blob/master/README.md",
-                "issues": "https://github.com/Rias500/position-fieldtype/issues"
+                "docs": "https://github.com/Rias500/craft-position-fieldtype/blob/master/README.md",
+                "issues": "https://github.com/Rias500/craft-position-fieldtype/issues"
             },
-            "time": "2018-02-15T15:54:22+00:00"
+            "time": "2018-10-07T10:25:48+00:00"
         },
         {
             "name": "rize/uri-template",
@@ -3232,11 +3231,11 @@
         },
         {
             "name": "spicyweb/craft-neo",
-            "version": "2.2.2",
+            "version": "2.2.3",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/5214806431b84140b6f0ec7ffeb1e1aab92adffb",
-                "reference": "5214806431b84140b6f0ec7ffeb1e1aab92adffb",
+                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/9d464ea93b8ee636bccb8cc712d96eb003da8251",
+                "reference": "9d464ea93b8ee636bccb8cc712d96eb003da8251",
                 "shasum": ""
             },
             "require": {
@@ -3256,7 +3255,6 @@
                     "benf\\neo\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -3268,22 +3266,28 @@
             ],
             "description": "A Matrix-like field type that uses existing fields",
             "keywords": [
-                "Neo",
                 "cms",
                 "craftcms",
                 "field",
                 "matrix",
+                "neo",
                 "plugin"
             ],
-            "time": "2019-01-30T08:18:38+00:00"
+            "support": {
+                "issues": "https://github.com/spicywebau/craft-neo/issues",
+                "source": "https://github.com/spicywebau/craft-neo",
+                "docs": "https://github.com/spicywebau/craft-neo/wiki",
+                "rss": "https://github.com/spicywebau/craft-neo/commits/master.atom"
+            },
+            "time": "2019-02-06T01:23:42+00:00"
         },
         {
             "name": "studioespresso/craft-dumper",
-            "version": "1.1.3",
+            "version": "1.3.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studioespresso/craft3-dumper/zipball/deb2a390b41ec89a4b0124443e3c99f9aa5ff162",
-                "reference": "deb2a390b41ec89a4b0124443e3c99f9aa5ff162",
+                "url": "https://api.github.com/repos/studioespresso/craft3-dumper/zipball/3f9ef15ea639c85e7d6fb644081ddc7d2e004224",
+                "reference": "3f9ef15ea639c85e7d6fb644081ddc7d2e004224",
                 "shasum": ""
             },
             "require": {
@@ -3326,7 +3330,7 @@
                 "docs": "https://github.com/studioespresso/craft3-dumper/blob/master/README.md",
                 "issues": "https://github.com/studioespresso/craft3-dumper/issues"
             },
-            "time": "2018-02-01T15:06:25+00:00"
+            "time": "2018-07-20T17:28:50+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3941,15 +3945,15 @@
         },
         {
             "name": "topshelfcraft/environment-label",
-            "version": "3.1.3",
+            "version": "3.1.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TopShelfCraft/Environment-Label/zipball/e436d90863db15cd7c3b6ca1290f096ce2dab809",
-                "reference": "e436d90863db15cd7c3b6ca1290f096ce2dab809",
+                "url": "https://api.github.com/repos/TopShelfCraft/Environment-Label/zipball/3c719c6844201830c08cdd3d8c438c5050351c9c",
+                "reference": "3c719c6844201830c08cdd3d8c438c5050351c9c",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0-RC15"
+                "craftcms/cms": "^3.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -3987,10 +3991,10 @@
                 "environment label"
             ],
             "support": {
-                "docs": "https://raw.githubusercontent.com/TopShelfCraft/Environment-Label",
+                "docs": "https://github.com/TopShelfCraft/Environment-Label",
                 "issues": "https://github.com/TopShelfCraft/Environment-Label/issues"
             },
-            "time": "2018-03-22T16:03:37+00:00"
+            "time": "2018-11-02T21:25:23+00:00"
         },
         {
             "name": "trendyminds/molecule",
@@ -4200,11 +4204,11 @@
         },
         {
             "name": "verbb/super-table",
-            "version": "2.1.5.3",
+            "version": "2.1.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/super-table/zipball/28522a79ebfbe7e967da96ffebbc5045fc56ee36",
-                "reference": "28522a79ebfbe7e967da96ffebbc5045fc56ee36",
+                "url": "https://api.github.com/repos/verbb/super-table/zipball/b03a289a943d2fbcb7570816f1a9a720d3edb6e4",
+                "reference": "b03a289a943d2fbcb7570816f1a9a720d3edb6e4",
                 "shasum": ""
             },
             "require": {
@@ -4248,7 +4252,7 @@
                 "docs": "https://github.com/verbb/super-table",
                 "rss": "https://github.com/verbb/super-table/commits/v2.atom"
             },
-            "time": "2019-01-22T20:26:17+00:00"
+            "time": "2019-02-10T11:12:07+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

@@ -1,4 +1,4 @@
-dateModified: 1548888512
+dateModified: 1549928545
 email:
   fromEmail: cory@46m.us
   fromName: 'Big Yokohama'
@@ -184,11 +184,11 @@ plugins:
   seo:
     edition: standard
     enabled: true
-    schemaVersion: 3.0.0
+    schemaVersion: 3.1.0
   super-table:
     edition: standard
     enabled: true
-    schemaVersion: 2.0.7
+    schemaVersion: 2.0.8
   twig-perversion:
     edition: standard
     enabled: true
