@@ -13,22 +13,18 @@
   <meta name="theme-color" content="#ffffff">
 
   {# Custom meta overrides #}
-  {% include '_components/website/customMeta' %}
+  {# {% include '_components/website/customMeta' %} #}
 
   {% hook "seo" %}
 </head>
 <body>
 
-  {% include '_components/ui/navigation' %}
+  {# {% include '_components/ui/navigation' %} #}
 
   {% block content %}
-    {# Content will be appended here #}
   {% endblock %}
 
-  {% include '_components/ui/footer' %}
-  {% include '_components/ui/heartbeat' %}
-  {% include '_components/ui/shade' %}
-  {% include '_components/ui/mediaModal' %}
+  {# {% include '_components/ui/footer' %} #}
 
   <script src='/dist/vendor.js'></script>
   <script src='/dist/polyfills.js'></script>

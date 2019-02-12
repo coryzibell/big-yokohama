@@ -1,0 +1,19 @@
+{% macro output(link) %}
+{% spaceless %}
+  {% for row in link %}
+    {% switch link.type %}
+      {% case 'asset' %}
+        {% if row.asset.one() %}
+          {{ row.asset.one().url }}
+        {% endif %}
+      {% case 'entry' %}
+        {% if row.entry.one() %}
+          {{ row.entry.one().url }}
+        {% endif %}
+      {% case 'internalLink' %}
+        {{ row.path }}
+      {% case 'externalLink' %}
+        {{ row.protocol }}{{ row.path }}
+  {% endfor %}
+{% endspaceless %}
+{% endmacro %}
