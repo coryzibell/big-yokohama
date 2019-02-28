@@ -106,6 +106,15 @@ jobs:
           name: rsync Deploy
           command: rsync --copy-unsafe-links -rvzcSle 'ssh -p 22 -o StrictHostKeyChecking=no -i id_rsa' --exclude-from '.rsyncignore' ./ coryzibell@coryzibell.webfactional.com:/home/coryzibell/webapps/big_yokohama
 
+  clear_cloudflare_cache:
+    docker:
+      - image: byrnedo/alpine-curl
+
+    steps:
+      - run:
+          name: Clear Cloudflare Cache
+          command: "curl -X POST \"https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache\" -H \"X-Auth-Email: $CLOUDFLARE_EMAIL\" -H \"X-Auth-Key: $CLOUDFLARE_API_KEY\" -H \"Content-Type: application/json\" --data '{\"purge_everything\":true}'"
+
 workflows:
   version: 2
   build:
@@ -116,6 +125,11 @@ workflows:
           requires:
             - build_backend
             - build_frontend
+          filters:
+            branches:
+              only: master
+
+      - clear_cloudflare_cache:
           filters:
             branches:
               only: master
