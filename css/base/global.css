@@ -3,6 +3,10 @@ body {
   height: 100%;
 }
 
+.main {
+  padding: 10px;
+}
+
 .red {
   color: var(--red);
 }
