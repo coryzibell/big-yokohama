@@ -13,6 +13,17 @@ body {
   -webkit-font-smoothing: antialiased;
   margin: 0;
   font-family: 'undefined-medium';
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+main {
+  max-width: 800px;
+  width: 100%;
+  margin-top: 10vh;
 }
 
 h1,
@@ -33,12 +44,12 @@ li {
   display: block;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4 {
   font-size: inherit;
-}
+} */
 
 strong {
   font-weight: bold;
