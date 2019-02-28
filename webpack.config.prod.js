@@ -30,7 +30,7 @@ module.exports = {
         use: ExtractTextPlugin.extract([
           {
             loader: 'css-loader',
-            options: { importLoaders: 1 }
+            options: { importLoaders: 1, minimize: true }
           },
           'postcss-loader'
         ])
