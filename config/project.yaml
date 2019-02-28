@@ -1,4 +1,4 @@
-dateModified: 1549932593
+dateModified: 1551397245
 email:
   fromEmail: cory@46m.us
   fromName: 'Big Yokohama'
@@ -17,7 +17,7 @@ fields:
     handle: linkObject
     instructions: ''
     name: 'Link Object'
-    searchable: true
+    searchable: '1'
     settings:
       columns:
         29:
@@ -239,7 +239,7 @@ plugins:
   super-table:
     edition: standard
     enabled: true
-    schemaVersion: 2.0.8
+    schemaVersion: 2.0.10
   twig-perversion:
     edition: standard
     enabled: true
@@ -354,12 +354,12 @@ superTableBlockTypes:
             fields:
               9be21388-f65a-427a-a570-6f3c5b1e64a5:
                 required: '0'
-                sortOrder: 1
+                sortOrder: '1'
               adefd920-24c6-4f7f-95bb-3b6594a02a2e:
                 required: '0'
-                sortOrder: 2
+                sortOrder: '2'
             name: Content
-            sortOrder: 1
+            sortOrder: '1'
     fields:
       9be21388-f65a-427a-a570-6f3c5b1e64a5:
         contentColumnType: string
@@ -401,7 +401,7 @@ system:
   edition: solo
   live: true
   name: 'Big Yokohama'
-  schemaVersion: 3.1.23
+  schemaVersion: 3.1.25
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
