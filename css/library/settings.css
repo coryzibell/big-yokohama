@@ -1,4 +1,4 @@
-/* 
+/*
 Custom Media Queries
 -p queries are breakpoints + standard gutter
 */
@@ -31,20 +31,14 @@ Custom Media Queries
   --black: #000;
   --white: #fff;
 
-  --blue: #243570;
-  --denim: #424656;
-  --gray: #686b78;
-  --light-gray: #f3ebf1;
-  --orange: #ef4323;
-  --magenta: #e91976;
-  --teal: #1bbfdd;
-  --lavender: #8887de;
-  --tan: #f3ebf1;
+  --grey: #4a4a4a;
 
-  --light-yellow: #f5f2b2;
-  --light-lavender: #d4d2ec;
-  --light-teal: #baecf5;
-  --light-magenta: #ffc5d3;
+  --beige: #e4e0cd;
+  --blue: #03008c;
+  --purple: #89008a;
+  --red: #8a0100;
+  --green: #005900;
+  --yellow: #ba5c00;
 
   /* Font Colors */
   --base-background-color: var(--white);

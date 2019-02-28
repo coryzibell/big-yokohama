@@ -1,4 +1,24 @@
 body {
-  background-color: var(--white);
+  background-color: var(--beige);
   height: 100%;
+}
+
+.red {
+  color: var(--red);
+}
+
+.green {
+  color: var(--green);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.purple {
+  color: var(--purple);
 }
