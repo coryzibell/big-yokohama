@@ -1,4 +1,4 @@
-dateModified: 1549932219
+dateModified: 1549932593
 email:
   fromEmail: cory@46m.us
   fromName: 'Big Yokohama'
@@ -305,7 +305,7 @@ sections:
       cf20cb7a-42d1-4144-a6b6-fb6c436fec7b:
         enabledByDefault: true
         hasUrls: true
-        template: ''
+        template: homepage/_entry
         uriFormat: __home__
     type: single
   f0f67421-7773-454e-be45-b58b675f930d:

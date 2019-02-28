@@ -4,6 +4,7 @@
 @import 'normalize.css';
 
 @import './base/elements.css';
+@import './base/fonts.css';
 @import './base/icons.css';
 @import './base/global.css';
 @import './base/fonts.css';
@@ -12,5 +13,3 @@
 // Components
 // ==========================================================================
 @import '../components/ui/**/*.css';
-@import '../components/website/**/*.css';
-// @import '../components/portal/**/*.css';

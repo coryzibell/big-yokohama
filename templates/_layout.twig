@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
-  <link rel="stylesheet" href="/dist/websitestyles.css" />
+  <link rel="stylesheet" href="/dist/style.css" />
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -13,26 +13,21 @@
   <meta name="theme-color" content="#ffffff">
 
   {# Custom meta overrides #}
-  {% include '_components/website/customMeta' %}
+  {# {% include '_components/website/customMeta' %} #}
 
   {% hook "seo" %}
 </head>
 <body>
 
-  {% include '_components/ui/navigation' %}
+  {# {% include '_components/ui/navigation' %} #}
 
   {% block content %}
-    {# Content will be appended here #}
   {% endblock %}
 
-  {% include '_components/ui/footer' %}
-  {% include '_components/ui/heartbeat' %}
-  {% include '_components/ui/shade' %}
-  {% include '_components/ui/mediaModal' %}
+  {# {% include '_components/ui/footer' %} #}
 
   <script src='/dist/vendor.js'></script>
-  <script src='/dist/polyfills.js'></script>
-  <script src='/dist/websitebundle.js'></script>
+  <script src='/dist/bundle.js'></script>
   <script defer src='/dist/svgxuse.js'></script>
 </body>
 </html>
