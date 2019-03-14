@@ -1,4 +1,4 @@
-dateModified: 1551397245
+dateModified: 1552601154
 email:
   fromEmail: cory@46m.us
   fromName: 'Big Yokohama'
@@ -220,6 +220,9 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+    settings:
+      pathComponent: ../components/
+      pathIcon: ../components/icons/
   neo:
     edition: standard
     enabled: true
