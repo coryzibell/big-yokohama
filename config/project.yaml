@@ -1,4 +1,4 @@
-dateModified: 1552605825
+dateModified: 1552606919
 email:
   fromEmail: cory@46m.us
   fromName: 'Big Yokohama'
@@ -384,6 +384,15 @@ superTableBlockTypes:
               handle: attribute
               width: ''
               type: singleline
+            col2:
+              heading: Value
+              handle: value
+              width: ''
+              type: singleline
+          defaults:
+            -
+              col1: ''
+              col2: ''
           columnType: text
         contentColumnType: text
         fieldGroup: null
