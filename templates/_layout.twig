@@ -18,8 +18,9 @@
   {% hook "seo" %}
 </head>
 <body>
-
-  {# {% include '_components/ui/navigation' %} #}
+  {{ craft.molecule.get("ui/navigation/index", {
+    entry: entry
+  }) }}
 
   {% block content %}
   {% endblock %}

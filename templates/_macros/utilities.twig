@@ -1,0 +1,36 @@
+{% macro navigation(section, level) %}
+  {% if level == NULL %}
+  {% set level = 1 %}
+  {% endif %}
+  {% import _self as utilities %}
+  {% set pages = craft.entries.section(section).level(level).all() %}
+  {% if pages | length %}
+  <ul>
+    {% nav page in pages %}
+      {{ utilities.linkObject(page.linkObject, page.title) }}
+      {{ utilities.navigation(section, level+1) }}
+      </li>
+    {% endnav %}
+   </ul>
+   {% endif %}
+{% endmacro %}
+
+{% macro linkObject(link, text, class) %}
+  <li{% if link.linkDataAttributes | length %}
+  {% for block in link.linkDataAttributes %} {{ block.attribute }}{% endfor %}
+  {% endif %}
+  {% if class != NULL %} class="{{ class }}"{% endif %}>
+  {% if link.linkContent | length %}
+  {% for block in link.linkContent %}
+    <a href="{% switch block.type %}
+    {% case 'entry' %}{{ block.entry.one().getUrl() }}
+    {% case 'asset' %}{{ block.asset.one().getUrl() }}
+    {% case 'externalLink' %}{{ block.protocol }}{{ block.path }}
+    {% case 'internalLink' %}{{ block.path }}
+    {% endswitch %}">
+    {{ text }}
+    </a>
+  {% endfor %}
+  {% else %}{{ text }}
+  {% endif %}
+{% endmacro %}
