@@ -27,6 +27,9 @@ return [
 
         // The secure key Craft will use for hashing and encrypting data
         'securityKey' => getenv('SECURITY_KEY'),
+      
+        // Use project.yml config
+        'useProjectConfigFile' => true,
     ],
 
     // Dev environment settings
