@@ -30,7 +30,8 @@
     "nystudio107/craft-cookies": "1.1.11",
     "marionnewlevant/twig-perversion": "2.0.7",
     "trendyminds/molecule": "1.1.1",
-    "spicyweb/craft-neo": "2.2.6"
+    "spicyweb/craft-neo": "2.2.6",
+    "nystudio107/craft-minify": "1.2.9"
   },
   "autoload": {
     "psr-4": {
