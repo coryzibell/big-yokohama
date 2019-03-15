@@ -18,15 +18,12 @@
   {% hook "seo" %}
 </head>
 <body>
-  {{ craft.molecule.get("ui/navigation/index", {
-    entry: entry
-  }) }}
+  {{ craft.molecule.get("ui/navigation/index") }}
 
   {% block content %}
   {% endblock %}
 
   {# {% include '_components/ui/footer' %} #}
-
   <script src='/dist/vendor.js'></script>
   <script src='/dist/bundle.js'></script>
   <script defer src='/dist/svgxuse.js'></script>
