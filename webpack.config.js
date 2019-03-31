@@ -10,6 +10,7 @@ const glob = require('glob')
 const child_process = require('child_process')
 const config = require('./config')
 const vendor = require('./js/vendor')
+const app = require('./js/app')
 
 let localEnv = Dotenv.definitions['process.env.LOCAL_URL']
 localEnv = localEnv.substring(1, localEnv.length - 1)
@@ -21,7 +22,8 @@ module.exports = {
     bundle: bundleJs,
     style: './css/app.css',
     svgxuse: './node_modules/svgxuse/svgxuse.js',
-    vendor: vendor
+    vendor: vendor,
+    app: app
   },
   output: {
     publicPath: '/',

@@ -7,6 +7,7 @@ const glob = require('glob')
 const child_process = require('child_process')
 const config = require('./config')
 const vendor = require('./js/vendor')
+const app = require('./js/app')
 
 const bundleJs = glob.sync('./components/*(shared|ui)/**/index.js')
 
@@ -15,7 +16,8 @@ module.exports = {
     bundle: bundleJs,
     style: './css/app.css',
     svgxuse: './node_modules/svgxuse/svgxuse.js',
-    vendor: vendor
+    vendor: vendor,
+    app: app
   },
   output: {
     publicPath: '/',
