@@ -1,4 +1,4 @@
-{%- macro navigation(section, level, class) -%}
+{%- macro navigation(section, level, parentClass, childClass, parentElement, childElement) -%}
   {# This macro takes the section text for a structure section and recursively
   calls itself to spit out unordered lists of the child entries as links #}
   {% if level == NULL %}
@@ -7,26 +7,28 @@
   {% import _self as utilities %}
   {% set pages = craft.entries.section(section).level(level).all() %}
   {% if pages | length %}
-  <ul>
+  <{{ parentElement }} class="{{ parentClass~"-level-"~level }}">
     {% for page in pages %}
-      {% if class != null %}
-        {% set classNested = class~"-level-"~level %}
+      {% if childClass != null %}
+        {% set classNested = childClass~"-level-"~level %}
       {% else %}
         {% set classNested = null %}
       {% endif %}
-      {{ utilities.linkBlock(page.linkObject, page.title, classNested, 'li') | trim }}
-      {{ utilities.navigation(section, level+1, class) | trim }}
-      </li>
+      {{ utilities.linkBlock(page.linkObject, page.title, classNested, childElement) | trim }}
+      {{ utilities.navigation(section, level+1, parentClass, childClass, parentElement, childElement) | trim }}
+      </{{ childElement }}>
     {% endfor %}
-  </ul>
+  </{{ parentElement }}>
   {% endif %}
 {% endmacro %}
 
 {% macro linkBlock(link, text, class, parentElement) %}
   {% import _self as utilities %}
-  {% if parentElement != null %}<{{ parentElement }}
+  {% if parentElement != null %}
+  <{{ parentElement }}
   {{ utilities.dataAttributes(link.linkDataAttributes) }}
-  {% if class != NULL %} class="{{ class }}"{% endif %}>{% endif %}
+  {% if class != NULL %} class="{{ class }}"{% endif %}>
+  {% endif %}
   {% if link.linkContent | length %}
   {% for block in link.linkContent %}
     <a href="{{ utilities.linkTag(block) }}"
