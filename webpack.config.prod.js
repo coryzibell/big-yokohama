@@ -2,16 +2,18 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CompilerPlugin = require('compiler-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const path = require('path')
 const glob = require('glob')
 const child_process = require('child_process')
 const config = require('./config')
-const vendor = require('./js/vendor')
-const app = require('./js/app')
+const vendor = './js/vendor'
+const app = './js/app'
 
 const bundleJs = glob.sync('./components/*(shared|ui)/**/index.js')
 
 module.exports = {
+  mode: 'production',
   entry: {
     bundle: bundleJs,
     style: './css/app.css',
@@ -40,11 +42,16 @@ module.exports = {
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ }
     ]
   },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        sourceMap: true,
+        uglifyOptions: {}
+      })
+    ]
+  },
   plugins: [
     new ExtractTextPlugin('[name].css'),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor'
-    }),
     new CleanWebpackPlugin([path.join(__dirname, config.paths.dist)], {
       root: process.cwd()
     }),
@@ -53,7 +60,6 @@ module.exports = {
         `./node_modules/.bin/svg-sprite-generate -d ${config.paths
           .publicPath}icons -o ${config.paths.dist}symbol-defs.svg`
       )
-    }),
-    new webpack.optimize.UglifyJsPlugin()
+    })
   ]
 }

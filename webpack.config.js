@@ -18,6 +18,7 @@ localEnv = localEnv.substring(1, localEnv.length - 1)
 const bundleJs = glob.sync('./components/*(shared|ui)/**/index.js')
 
 module.exports = {
+  mode: 'development',
   entry: {
     bundle: bundleJs,
     style: './css/app.css',
