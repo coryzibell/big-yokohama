@@ -80,7 +80,33 @@ jobs:
           paths:
             - node_modules
 
-  deploy:
+  deploy_development:
+    docker:
+      - image: alpine:latest
+
+    steps:
+      - run:
+          name: Install deployment packages
+          command: apk add --no-cache ca-certificates openssh-client rsync
+      - *attach_workspace
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "c4:5c:80:25:39:5e:d8:63:09:b9:aa:db:40:c7:a8:6c"
+      - run:
+          name: Move Workspace Artifacts
+          command: |
+            set -exu
+            mkdir -p vendor
+            mkdir -p public_html/dist
+            mv /tmp/workspace/vendor/* vendor/
+            mv /tmp/workspace/dist/* web/dist/
+
+      - run:
+          name: rsync Deploy
+          command: rsync --copy-unsafe-links -rvzcSle 'ssh -p 22 -o StrictHostKeyChecking=no -i id_rsa' --exclude-from '.rsyncignore' ./ coryzibell@coryzibell.webfactional.com:/home/coryzibell/webapps/big_yokohama_dev
+
+  deploy_production:
     docker:
       - image: alpine:latest
 
@@ -121,7 +147,14 @@ workflows:
     jobs:
       - build_backend
       - build_frontend
-      - deploy:
+      - deploy_development:
+          requires:
+            - build_backend
+            - build_frontend
+          filters:
+            branches:
+              only: develop
+      - deploy_production:
           requires:
             - build_backend
             - build_frontend
