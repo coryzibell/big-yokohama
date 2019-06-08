@@ -4,8 +4,7 @@
   "main": "public_html/index.html",
   "scripts": {
     "webpack:dev": "SITE=$site webpack --watch --colors",
-    "webpack:prod":
-      "NODE_ENV=production webpack --config ./webpack.config.prod.js --colors",
+    "webpack:prod": "NODE_ENV=production webpack --config ./webpack.config.prod.js --colors",
     "prod": "npm run webpack:prod",
     "predev": "npm run webpack:dev",
     "dev": "npm run webpack:dev",
