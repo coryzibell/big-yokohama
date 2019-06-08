@@ -14,24 +14,18 @@
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
-    "craftcms/cms": "3.1.18",
+    "craftcms/cms": "3.1.29",
     "vlucas/phpdotenv": "^2.4.0",
-    "verbb/super-table": "2.1.16",
-    "pennebaker/craft-architect": "2.2.8",
-    "charliedev/element-map": "1.0.2",
+    "verbb/super-table": "2.1.20",
     "mmikkel/cp-field-inspect": "1.0.5",
     "ether/seo": "3.5.4",
-    "ostark/upper": "1.3.2",
     "studioespresso/craft-dumper": "1.3.1",
     "topshelfcraft/environment-label": "3.1.5",
     "rias/craft-position-fieldtype": "1.0.14",
     "nystudio107/craft-pathtools": "1.0.7",
-    "aelvan/imager": "v2.0.0",
     "nystudio107/craft-cookies": "1.1.11",
     "marionnewlevant/twig-perversion": "2.0.7",
-    "trendyminds/molecule": "1.1.1",
-    "spicyweb/craft-neo": "2.2.6",
-    "nystudio107/craft-minify": "1.2.9"
+    "trendyminds/molecule": "1.2.0"
   },
   "autoload": {
     "psr-4": {

@@ -1,4 +1,4 @@
-dateModified: 1552609191
+dateModified: 1559969310
 email:
   fromEmail: cory@46m.us
   fromName: 'Big Yokohama'
@@ -223,10 +223,6 @@ plugins:
     settings:
       pathComponent: ../components/
       pathIcon: ../components/icons/
-  neo:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.2.0
   path-tools:
     edition: standard
     enabled: true
@@ -242,7 +238,7 @@ plugins:
   super-table:
     edition: standard
     enabled: true
-    schemaVersion: 2.0.10
+    schemaVersion: 2.0.12
   twig-perversion:
     edition: standard
     enabled: true
@@ -413,7 +409,7 @@ system:
   edition: solo
   live: true
   name: 'Big Yokohama'
-  schemaVersion: 3.1.25
+  schemaVersion: 3.1.28
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
