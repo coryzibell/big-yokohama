@@ -28,13 +28,16 @@ return [
         // The secure key Craft will use for hashing and encrypting data
         'securityKey' => getenv('SECURITY_KEY'),
 
+        'allowUpdates' => false,
+
         // Use project.yml config
         'useProjectConfigFile' => true,
     ],
 
     // Local environment settings
     'local' => [
-      'devMode' => true
+      'devMode' => true,
+      'allowUpdates' => true
     ],
 
     // Dev environment settings
@@ -54,7 +57,6 @@ return [
 
     // Production environment settings
     'production' => [
-        'allowAutoUpdates' => false,
 
         // Base site URL
         'siteUrl' => null,
