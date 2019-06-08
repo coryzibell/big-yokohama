@@ -29,9 +29,6 @@ return [
         'securityKey' => getenv('SECURITY_KEY'),
 
         'allowUpdates' => false,
-
-        // Use project.yml config
-        'useProjectConfigFile' => true,
     ],
 
     // Local environment settings
