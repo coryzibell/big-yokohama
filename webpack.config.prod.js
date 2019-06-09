@@ -1,7 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const CompilerPlugin = require('compiler-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const path = require('path')
 const glob = require('glob')
@@ -16,8 +15,7 @@ module.exports = {
   mode: 'production',
   entry: {
     bundle: bundleJs,
-    style: './css/app.css',
-    svgxuse: './node_modules/svgxuse/svgxuse.js',
+    style: './css/app.pcss',
     vendor: vendor,
     app: app
   },
@@ -29,7 +27,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.pcss$/,
         exclude: /node_modules/,
         use: ExtractTextPlugin.extract([
           {
@@ -51,15 +49,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('[name].css'),
+    new ExtractTextPlugin('[name].pcss'),
     new CleanWebpackPlugin([path.join(__dirname, config.paths.dist)], {
       root: process.cwd()
-    }),
-    new CompilerPlugin('done', function() {
-      child_process.exec(
-        `./node_modules/.bin/svg-sprite-generate -d ${config.paths
-          .publicPath}icons -o ${config.paths.dist}symbol-defs.svg`
-      )
     })
   ]
 }

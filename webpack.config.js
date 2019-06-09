@@ -2,8 +2,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const webpack = require('webpack')
 const WebpackNotifierPlugin = require('webpack-notifier')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const CompilerPlugin = require('compiler-webpack-plugin')
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const Dotenv = new (require('dotenv-webpack'))()
 const path = require('path')
 const glob = require('glob')
@@ -21,8 +19,7 @@ module.exports = {
   mode: 'development',
   entry: {
     bundle: bundleJs,
-    style: './css/app.css',
-    svgxuse: './node_modules/svgxuse/svgxuse.js',
+    style: './css/app.pcss',
     vendor: vendor,
     app: app
   },
@@ -34,7 +31,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.pcss$/,
         exclude: /node_modules/,
         use: ExtractTextPlugin.extract([
           {
@@ -48,37 +45,12 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('[name].css'),
+    new ExtractTextPlugin('[name].pcss'),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
     }),
-    new BrowserSyncPlugin(
-      {
-        host: 'localhost',
-        proxy: process.env.SITE || localEnv || 'http://0.0.0.0:8080',
-        port: 3000
-        // files: ['public_html/dist/*.css']
-      },
-      {
-        reload: false
-      }
-    ),
     new CleanWebpackPlugin([path.join(__dirname, config.paths.dist)], {
       root: process.cwd()
-    }),
-    new WebpackNotifierPlugin({
-      title: 'Webpack',
-      contentImage: path.join(
-        __dirname,
-        `${config.paths.publicPath}img/ds-logo.jpg`
-      )
-    }),
-    new CompilerPlugin('done', function() {
-      child_process.exec(
-        `onchange '${config.paths
-          .publicPath}icons' -i -- ./node_modules/.bin/svg-sprite-generate -d ${config
-          .paths.publicPath}icons -o ${config.paths.dist}symbol-defs.svg`
-      )
     })
   ]
 }
