@@ -2,7 +2,7 @@
   "name": "big-yokohama",
   "version": "0.0.0",
   "scripts": {
-    "webpack:dev": "SITE=$site webpack --watch --colors"
+    "build": "gulp"
   },
   "author": "Cory Zibell",
   "license": "MIT",

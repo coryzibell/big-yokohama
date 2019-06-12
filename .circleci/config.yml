@@ -64,7 +64,7 @@ jobs:
           command: npm install
       - run:
           name: Build JS & CSS
-          command: gulp
+          command: npm run build
       - run:
           name: Persist JS & CSS Bundles
           command: |
