@@ -10,12 +10,6 @@ module.exports = {
         'nesting-rules': true
       }
     },
-    autoprefixer: {},
-    'postcss-object-fit-images': {}
-    // Gets a little overzealous
-    // 'doiuse': {
-    //   "browsers": ['last 2 versions', '> 5%']
-    // }
-    // cssnano: {}
+    autoprefixer: {}
   }
 }
