@@ -28,7 +28,8 @@ export function styles() {
     .pipe(postcss())
     .pipe(rename({
       basename: 'style',
-      suffix: '.min'
+      suffix: '.min',
+      extname: '.css'
     }))
     .pipe(gulp.dest(paths.styles.dest))
 }

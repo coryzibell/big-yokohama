@@ -3,8 +3,12 @@ module.exports = {
   plugins: {
     'postcss-easy-import': {},
     'postcss-custom-media': {},
-    precss: {},
-    autoprefixer: {},
-    cssnano: {}
+    'precss': {},
+    'autoprefixer': {},
+    'cssnano': {preset: ['default', {
+                discardComments: {
+                    removeAll: true,
+                },
+            }]}
   }
 }
