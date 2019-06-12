@@ -1,6 +1,6 @@
 import 'color'
-import { namedAccessibleColors } from './utils/colors'
+import colors from 'accessible-named-colors'
 
-console.log(namedAccessibleColors)
+console.log(colors)
 
 console.log('built')
